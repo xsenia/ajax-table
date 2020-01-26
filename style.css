@@ -1,8 +1,30 @@
 table {
     border-collapse: collapse;
 }
+
 td {
     border: 1px solid #ccc;
     margin-bottom: 10px;
     padding: 5px;
+}
+
+#filter-header {
+    display: flex;
+}
+
+.keys {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid red;
+}
+
+#data-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.value {
+    width: 100px;
+    padding: 10px;
+    border: 1px solid red;
 }
