@@ -19,13 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const data = JSON.parse(request.responseText);
 
             const headerData = data[0];
-            for (let key in headerData) {
-                  filterHeader.innerHTML += '<div class="keys">' + key + '</div>';
+            for (let header in headerData) {
+                  filterHeader.innerHTML += '<div class="keys">' + header + '</div>';
             }  
 
             for (let i = 0; i < data.length; i++) {
                   let obj = data[i];
-                  console.log('obj: ', obj.company);
                   dataWrap.innerHTML += `<div class="row">
                         <div class="value">${obj.id}</div>
                         <div class="value">${obj.name}</div>
@@ -36,8 +35,16 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="value">${obj.website}</div>
                         <div class="value">${obj.company.name}</div>
                         </div>
-                  `;                                
+                  `;                               
             }
+
+            let city = [];
+            for (let i = 0; i < data.length; i++) {
+                  city[i] = data[i].address.city;
+            }
+            console.log(city);
+            city.sort();
+            console.log(city);
 
       }                    
     });
