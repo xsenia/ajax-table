@@ -13,9 +13,13 @@ td {
 }
 
 .keys {
-    width: 100px;
+    width: 160px;
     padding: 10px;
-    border: 1px solid red;
+    border: 1px solid #ccc;
+}
+
+.keys:first-child {
+    width: 20px;
 }
 
 #data-wrap {
@@ -24,7 +28,15 @@ td {
 }
 
 .value {
-    width: 100px;
+    width: 160px;
     padding: 10px;
-    border: 1px solid red;
+    border: 1px solid #ccc;
+}
+
+.value:first-child {
+    width: 20px;
+}
+
+.row {
+    display: flex;
 }

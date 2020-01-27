@@ -25,9 +25,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
             for (let i = 0; i < data.length; i++) {
                   let obj = data[i];
-                  for (let key in obj) {
-                        dataWrap.innerHTML += '<div class="value">' + obj[key] + '<div>';
-                  }                  
+                  console.log('obj: ', obj.company);
+                  dataWrap.innerHTML += `<div class="row">
+                        <div class="value">${obj.id}</div>
+                        <div class="value">${obj.name}</div>
+                        <div class="value">${obj.username}</div>
+                        <div class="value">${obj.email}</div>
+                        <div class="value">${obj.address.city}</div>
+                        <div class="value">${obj.phone}</div>
+                        <div class="value">${obj.website}</div>
+                        <div class="value">${obj.company.name}</div>
+                        </div>
+                  `;                                
             }
 
       }                    
